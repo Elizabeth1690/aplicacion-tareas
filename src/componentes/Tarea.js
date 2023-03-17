@@ -5,7 +5,7 @@ function Tarea({ id, texto, completada, completarTarea, eliminarTarea }) {
   return (
     <div
       className={
-        completada ? "tarea-contenedor completada " : "tarea-contenedor"
+        completada ? "tarea-contenedor completada " : "tarea-contenedor" /* para generar más de 1 clase se debe dejar espacio*/
       }
     >
       <div className="tarea-texto" onClick={() => completarTarea(id)}>

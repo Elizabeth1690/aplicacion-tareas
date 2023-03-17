@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; /* tamaño de la caja, como se va calcular en base al padding, marge, al tamaño del elemento, esa caja que rodea al elemento  */
 }
 
 html,
@@ -22,7 +22,7 @@ h1 {
 
 .aplicacion-tareas {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap;/* para que los elementos no necesarimanete se ajusten a una sola linea,fila, sino que alguno de los elementos toma todoe el ancho, los demás van a seguir fluyendo hacía abajo en base a como se puede reajustar*/   
   align-items: center;
   justify-content: center;
 }

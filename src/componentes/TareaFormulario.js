@@ -1,18 +1,26 @@
-import "../hojas-de-estilo/TareaFormulario.css";
 import { useState } from "react";
+import "../hojas-de-estilo/TareaFormulario.css";
+import {v4 as uuidv4} from "uuid"
 
-function TareaFormulario() {
+
+function TareaFormulario(props) {
+
+  const [input, setInput] = useState("")
   const manejarCambio = (e) => {
-    console.log("Escribiendo...");
+    setInput(e.target.value)
   };
   const manejarEnvio = (e) => {
+    e.preventDefault()
+
     const tareaNueva = {
-      id: "34545",
-      texto: "hola",
-    };
+      id: uuidv4(),
+      texto: input,
+      completada: false
+    }
+    props.onSubmit(tareaNueva);
   };
   return (
-    <form className="tarea-formulario">
+    <form className="tarea-formulario" onSubmit={manejarEnvio}>
       <input
         className="tarea-input"
         type="text"

@@ -1,6 +1,6 @@
 .tareas-lista-contenedor {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap;  /* sirve para que se presenten en lineas diferentes si es necesario*/
   justify-content: center;
   margin-top: 15px;
 }
